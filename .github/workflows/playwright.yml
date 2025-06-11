@@ -30,7 +30,7 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: playwright-report/
+          path: playwright-report/test1
           retention-days: 30
 
   test2:
@@ -54,7 +54,7 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: playwright-report/
+          path: playwright-report/test2
           retention-days: 30
 
   test3:
@@ -78,5 +78,5 @@ jobs:
         if: ${{ !cancelled() }}
         with:
           name: playwright-report
-          path: playwright-report/
+          path: playwright-report/test3
           retention-days: 30
