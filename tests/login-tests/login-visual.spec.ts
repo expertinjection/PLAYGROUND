@@ -1,5 +1,5 @@
 import { test, expect } from "./../../fixtures/PageObject";
-import { ScreenshotUtils } from "../../utils/ScreenshotUtils";
+import { ScreenshotUtils } from "../../utils/ScreenShotUtils"
 
 test.describe("SmartBear App Login Page visual verification @Login @Smoke", () => {
   test("Login Page Visual Regression", async ({ loginPage }) => {
