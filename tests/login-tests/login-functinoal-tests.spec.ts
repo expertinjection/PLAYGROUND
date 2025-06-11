@@ -1,5 +1,5 @@
 import { test, expect } from './../../fixtures/PageObject';
-import { ValidLoginData, InvalidLoginData } from "../../test-data/LoginData";
+import { ValidLoginData, InvalidLoginData } from "../../test-date/LoginData";
 
 test.describe('SmartBear App Login Page functional verification @Login @Smoke', () => {
   test("SmartBear App Login Page successful login", async ({ loginPage }) => {
