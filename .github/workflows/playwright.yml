@@ -33,6 +33,30 @@ jobs:
           name: playwright-report-test1
           path: playwright-report/
           retention-days: 30
+  test2:
+    timeout-minutes: 60
+    runs-on: ubuntu-latest
+    env:
+      baseURL: ${{ vars.BASEURL }}
+      loginURL: ${{ vars.LOGINURL }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: lts/*
+      - name: Install dependencies
+        run: npm ci
+      - name: Install Playwright Browsers
+        run: npx playwright install --with-deps
+      - name: Run Playwright tests
+        run: npx playwright test tests/login-tests
+      - name: Upload report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: playwright-report-test2
+          path: playwright-report/
+          retention-days: 30
 
  
   test3:
