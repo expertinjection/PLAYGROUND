@@ -8,7 +8,7 @@ on:
     - cron: '0 12 * * *'
 
 jobs:
-  test:
+  test1:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
@@ -31,7 +31,7 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-    test:
+    test2:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
@@ -54,7 +54,7 @@ jobs:
         name: playwright-report
         path: playwright-report/
         retention-days: 30
-      test:
+      test3:
     timeout-minutes: 60
     runs-on: ubuntu-latest
     env:
