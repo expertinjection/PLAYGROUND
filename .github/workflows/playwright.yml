@@ -29,7 +29,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report
+          name: playwright-report-test1
           path: playwright-report/test1
           retention-days: 30
 
@@ -53,7 +53,7 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report
+          name: playwright-report-test2
           path: playwright-report/test2
           retention-days: 30
 
@@ -77,6 +77,6 @@ jobs:
       - uses: actions/upload-artifact@v4
         if: ${{ !cancelled() }}
         with:
-          name: playwright-report
+          name: playwright-report-test3
           path: playwright-report/test3
           retention-days: 30
